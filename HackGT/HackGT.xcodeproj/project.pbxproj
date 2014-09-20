@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E566B8D219CDC13D00D4CDAF /* SelectAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */; };
 		E5E052FC19CD3036005FA27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FB19CD3036005FA27B /* main.m */; };
 		E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FE19CD3036005FA27B /* AppDelegate.m */; };
 		E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0530119CD3036005FA27B /* WelcomeVC.m */; };
@@ -43,6 +44,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		E566B8D019CDC13D00D4CDAF /* SelectAddressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAddressVC.h; sourceTree = "<group>"; };
+		E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAddressVC.m; sourceTree = "<group>"; };
 		E5E052F619CD3036005FA27B /* HackGT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E052FA19CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E052FB19CD3036005FA27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -148,6 +151,8 @@
 				E5E0530119CD3036005FA27B /* WelcomeVC.m */,
 				E5E0531F19CD6146005FA27B /* CreateProfileVC.h */,
 				E5E0532019CD6146005FA27B /* CreateProfileVC.m */,
+				E566B8D019CDC13D00D4CDAF /* SelectAddressVC.h */,
+				E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */,
 				E5E0532219CD6799005FA27B /* FinishProfileVC.h */,
 				E5E0532319CD6799005FA27B /* FinishProfileVC.m */,
 				E5E0530319CD3036005FA27B /* Main.storyboard */,
@@ -286,6 +291,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5E0532419CD6799005FA27B /* FinishProfileVC.m in Sources */,
+				E566B8D219CDC13D00D4CDAF /* SelectAddressVC.m in Sources */,
 				E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */,
 				E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */,
 				E5E0532119CD6146005FA27B /* CreateProfileVC.m in Sources */,
@@ -494,6 +500,7 @@
 				E5E0531B19CD3036005FA27B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E5E0531C19CD3036005FA27B /* Build configuration list for PBXNativeTarget "HackGTTests" */ = {
 			isa = XCConfigurationList;
@@ -502,6 +509,7 @@
 				E5E0531E19CD3036005FA27B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
