@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E566B8D219CDC13D00D4CDAF /* SelectAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */; };
+		E566B8DA19CE0BD800D4CDAF /* CreateOrderTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8D919CE0BD800D4CDAF /* CreateOrderTVC.m */; };
 		E5E052FC19CD3036005FA27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FB19CD3036005FA27B /* main.m */; };
 		E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FE19CD3036005FA27B /* AppDelegate.m */; };
 		E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0530119CD3036005FA27B /* WelcomeVC.m */; };
@@ -46,6 +47,8 @@
 /* Begin PBXFileReference section */
 		E566B8D019CDC13D00D4CDAF /* SelectAddressVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SelectAddressVC.h; sourceTree = "<group>"; };
 		E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SelectAddressVC.m; sourceTree = "<group>"; };
+		E566B8D819CE0BD800D4CDAF /* CreateOrderTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CreateOrderTVC.h; sourceTree = "<group>"; };
+		E566B8D919CE0BD800D4CDAF /* CreateOrderTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOrderTVC.m; sourceTree = "<group>"; };
 		E5E052F619CD3036005FA27B /* HackGT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E052FA19CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E052FB19CD3036005FA27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -162,6 +165,8 @@
 			children = (
 				E5E052FD19CD3036005FA27B /* AppDelegate.h */,
 				E5E052FE19CD3036005FA27B /* AppDelegate.m */,
+				E566B8D819CE0BD800D4CDAF /* CreateOrderTVC.h */,
+				E566B8D919CE0BD800D4CDAF /* CreateOrderTVC.m */,
 				E566B8D719CE001500D4CDAF /* NewUserRegistration */,
 				E5E0530319CD3036005FA27B /* Main.storyboard */,
 				E5E0530619CD3036005FA27B /* Images.xcassets */,
@@ -302,6 +307,7 @@
 				E566B8D219CDC13D00D4CDAF /* SelectAddressVC.m in Sources */,
 				E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */,
 				E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */,
+				E566B8DA19CE0BD800D4CDAF /* CreateOrderTVC.m in Sources */,
 				E5E0532119CD6146005FA27B /* CreateProfileVC.m in Sources */,
 				E5E052FC19CD3036005FA27B /* main.m in Sources */,
 			);

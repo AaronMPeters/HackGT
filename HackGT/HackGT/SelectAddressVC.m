@@ -37,12 +37,14 @@
     [[GMSGeocoder geocoder] reverseGeocodeCoordinate:CLLocationCoordinate2DMake(_locationManager.location.coordinate.latitude, _locationManager.location.coordinate.longitude) completionHandler:^(GMSReverseGeocodeResponse* response, NSError* error) {
         
         GMSAddress * address = [response results][0];
-        NSMutableString * result = [[NSMutableString alloc] initWithString:address.lines[0]];
-        [result appendString:@" "];
-        [result appendString:address.lines[1]];
+        if (address != nil){
+            NSMutableString * result = [[NSMutableString alloc] initWithString:address.lines[0]];
+            [result appendString:@" "];
+            [result appendString:address.lines[1]];
         
-        _addressString = [[NSString alloc] initWithString:result];  // Address string is stored for when the user clicks next
-        [_addressTextBox setText:result];
+            _addressString = [[NSString alloc] initWithString:result];  // Address string is stored for when the user clicks next
+            [_addressTextBox setText:result];
+        }
     }];
 
     
