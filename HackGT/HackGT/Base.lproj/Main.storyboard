@@ -5,10 +5,10 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--WelcomeVC-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="WelcomeVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -78,25 +78,17 @@
                             <constraint firstItem="tkF-0j-Ong" firstAttribute="top" secondItem="cwk-zD-2iV" secondAttribute="bottom" constant="8" id="tpu-iz-GXB"/>
                             <constraint firstAttribute="centerX" secondItem="vRa-Vd-g0T" secondAttribute="centerX" constant="-0.5" id="vXP-bh-Onu"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="wkN-jE-jqL" appends="YES" id="wgQ-2u-oJc"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" id="PIk-yI-XAl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
-                <swipeGestureRecognizer direction="left" id="wkN-jE-jqL">
-                    <connections>
-                        <segue destination="Qt4-Ht-pMN" kind="show" id="A6B-UT-YxF"/>
-                    </connections>
-                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="891" y="-557"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Profile-->
         <scene sceneID="jy7-79-4Rp">
             <objects>
-                <viewController id="Qt4-Ht-pMN" sceneMemberID="viewController">
+                <viewController id="Qt4-Ht-pMN" customClass="CreateProfileVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="LO4-bD-Fni"/>
                         <viewControllerLayoutGuide type="bottom" id="HdS-Nh-glE"/>
@@ -105,19 +97,138 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Yo" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CbM-JW-9A7">
-                                <rect key="frame" x="126" y="289" width="20" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Last" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="320-UM-Ydp">
+                                <rect key="frame" x="67" y="130" width="204" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="SaA-hR-okn"/>
+                                    <constraint firstAttribute="height" constant="70" id="Vsk-cF-c3H"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="26"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="John" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="iVL-xj-BoL">
+                                <rect key="frame" x="195" y="109" width="211" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="9vj-Le-gNb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" returnKeyType="next"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Doe" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="YmC-VM-HmV">
+                                <rect key="frame" x="195" y="147" width="211" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="211" id="qZN-nd-x44"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="words" keyboardType="namePhonePad" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="First" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="10x-kP-7ia">
+                                <rect key="frame" x="67" y="97" width="204" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="fpE-VB-lBK"/>
+                                    <constraint firstAttribute="width" constant="204" id="muh-Hj-SQl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="me@example.com" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mRu-Yg-GXN">
+                                <rect key="frame" x="195" y="185" width="211" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="next"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Email" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NRC-HZ-tNZ">
+                                <rect key="frame" x="62" y="165" width="204" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="204" id="mV5-k7-6hq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" tag="2" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qtP-6x-SYJ">
+                                <rect key="frame" x="195" y="224" width="211" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="done" secureTextEntry="YES"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Password" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Azd-3V-3Gr">
+                                <rect key="frame" x="53" y="204" width="204" height="70"/>
+                                <fontDescription key="fontDescription" name="SavoyeLetPlain" family="Savoye LET" pointSize="26"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GGi-y7-C78">
+                                <rect key="frame" x="273" y="282" width="133" height="42"/>
+                                <color key="backgroundColor" red="0.068778128080000001" green="0.2869552937" blue="0.63992745539999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="1e0-KB-m78"/>
+                                    <constraint firstAttribute="width" constant="171" id="SZm-5P-ZCP"/>
+                                    <constraint firstAttribute="height" constant="50" id="oTj-L3-NR0"/>
+                                    <constraint firstAttribute="width" constant="171" id="quE-IA-9et"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="quE-IA-9et"/>
+                                        <exclude reference="oTj-L3-NR0"/>
+                                    </mask>
+                                </variation>
+                                <connections>
+                                    <segue destination="3Md-Dl-053" kind="show" id="3ld-an-iPc"/>
+                                </connections>
+                            </button>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="0.64263999829999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="iVL-xj-BoL" firstAttribute="top" secondItem="LO4-bD-Fni" secondAttribute="bottom" constant="45" id="0xL-Uc-WPd"/>
+                            <constraint firstAttribute="centerX" secondItem="iVL-xj-BoL" secondAttribute="centerX" constant="-0.5" id="4HK-en-5EN"/>
+                            <constraint firstItem="NRC-HZ-tNZ" firstAttribute="top" secondItem="320-UM-Ydp" secondAttribute="bottom" constant="-35" id="4Wd-em-Ndi"/>
+                            <constraint firstItem="mRu-Yg-GXN" firstAttribute="leading" secondItem="NRC-HZ-tNZ" secondAttribute="trailing" constant="-71" id="OhW-0y-XVW"/>
+                            <constraint firstItem="qtP-6x-SYJ" firstAttribute="top" secondItem="mRu-Yg-GXN" secondAttribute="bottom" constant="9" id="TTo-36-kBQ"/>
+                            <constraint firstAttribute="centerX" secondItem="mRu-Yg-GXN" secondAttribute="centerX" constant="-0.5" id="W4T-DH-RPr"/>
+                            <constraint firstItem="YmC-VM-HmV" firstAttribute="leading" secondItem="320-UM-Ydp" secondAttribute="trailing" constant="-76" id="lXa-0Y-zZA"/>
+                            <constraint firstItem="320-UM-Ydp" firstAttribute="top" secondItem="LO4-bD-Fni" secondAttribute="bottom" constant="66" id="nMj-KF-xbO"/>
+                            <constraint firstItem="iVL-xj-BoL" firstAttribute="leading" secondItem="10x-kP-7ia" secondAttribute="trailing" constant="-76" id="qhB-0a-QpH"/>
+                            <constraint firstItem="320-UM-Ydp" firstAttribute="top" secondItem="10x-kP-7ia" secondAttribute="bottom" constant="-37" id="qzR-Jc-Ba6"/>
+                            <constraint firstAttribute="centerX" secondItem="YmC-VM-HmV" secondAttribute="centerX" constant="-0.5" id="yHp-a3-gyL"/>
+                            <constraint firstItem="YmC-VM-HmV" firstAttribute="top" secondItem="iVL-xj-BoL" secondAttribute="bottom" constant="8" id="zLN-fd-EiL"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="lsa-TR-xDs" appends="YES" id="2cP-0c-XwI"/>
+                        </connections>
                     </view>
+                    <navigationItem key="navigationItem" title="Create Profile" id="WfH-E6-wfd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="aVL-RY-IiD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <swipeGestureRecognizer direction="right" id="lsa-TR-xDs">
+                    <connections>
+                        <action selector="goBack" destination="aVL-RY-IiD" id="BZM-Xj-8P4"/>
+                    </connections>
+                </swipeGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1674" y="-557"/>
+        </scene>
+        <!--Finish Profile-->
+        <scene sceneID="jbr-ky-Ynf">
+            <objects>
+                <viewController id="3Md-Dl-053" customClass="FinishProfileVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="D9f-ye-MG9"/>
+                        <viewControllerLayoutGuide type="bottom" id="Vkw-xx-AMr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mn4-pL-ejI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="0.64263999829999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Finish Profile" id="pFs-Je-Htu">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="DKZ-H0-sKc"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xJb-Ui-nrO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2474" y="-557"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="14e-bX-RTd">
@@ -141,7 +252,4 @@
     <resources>
         <image name="Map_background" width="1178" height="1178"/>
     </resources>
-    <inferredMetricsTieBreakers>
-        <segue reference="uK5-iU-76M"/>
-    </inferredMetricsTieBreakers>
 </document>

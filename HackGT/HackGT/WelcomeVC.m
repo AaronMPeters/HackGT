@@ -6,13 +6,13 @@
 //  Copyright (c) 2014 Aaron Peters. All rights reserved.
 //
 
-#import "ViewController.h"
+#import "WelcomeVC.h"
 
-@interface ViewController ()
+@interface WelcomeVC ()
 
 @end
 
-@implementation ViewController
+@implementation WelcomeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
