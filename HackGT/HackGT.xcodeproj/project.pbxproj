@@ -110,6 +110,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E566B8D719CE001500D4CDAF /* NewUserRegistration */ = {
+			isa = PBXGroup;
+			children = (
+				E5E0530019CD3036005FA27B /* WelcomeVC.h */,
+				E5E0530119CD3036005FA27B /* WelcomeVC.m */,
+				E5E0531F19CD6146005FA27B /* CreateProfileVC.h */,
+				E5E0532019CD6146005FA27B /* CreateProfileVC.m */,
+				E566B8D019CDC13D00D4CDAF /* SelectAddressVC.h */,
+				E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */,
+				E5E0532219CD6799005FA27B /* FinishProfileVC.h */,
+				E5E0532319CD6799005FA27B /* FinishProfileVC.m */,
+			);
+			name = NewUserRegistration;
+			sourceTree = "<group>";
+		};
 		E5E052ED19CD3036005FA27B = {
 			isa = PBXGroup;
 			children = (
@@ -147,14 +162,7 @@
 			children = (
 				E5E052FD19CD3036005FA27B /* AppDelegate.h */,
 				E5E052FE19CD3036005FA27B /* AppDelegate.m */,
-				E5E0530019CD3036005FA27B /* WelcomeVC.h */,
-				E5E0530119CD3036005FA27B /* WelcomeVC.m */,
-				E5E0531F19CD6146005FA27B /* CreateProfileVC.h */,
-				E5E0532019CD6146005FA27B /* CreateProfileVC.m */,
-				E566B8D019CDC13D00D4CDAF /* SelectAddressVC.h */,
-				E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */,
-				E5E0532219CD6799005FA27B /* FinishProfileVC.h */,
-				E5E0532319CD6799005FA27B /* FinishProfileVC.m */,
+				E566B8D719CE001500D4CDAF /* NewUserRegistration */,
 				E5E0530319CD3036005FA27B /* Main.storyboard */,
 				E5E0530619CD3036005FA27B /* Images.xcassets */,
 				E5E0530819CD3036005FA27B /* LaunchScreen.xib */,
