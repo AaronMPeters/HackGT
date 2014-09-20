@@ -10,4 +10,6 @@
 
 @interface MenuSelectionTVC : UITableViewController
 
+@property (strong, nonatomic) NSMutableDictionary *foodItemsAndCost;
+
 @end

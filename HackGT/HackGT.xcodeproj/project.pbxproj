@@ -10,6 +10,16 @@
 		E566B8D219CDC13D00D4CDAF /* SelectAddressVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8D119CDC13D00D4CDAF /* SelectAddressVC.m */; };
 		E566B8DA19CE0BD800D4CDAF /* CreateOrderTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8D919CE0BD800D4CDAF /* CreateOrderTVC.m */; };
 		E566B8DD19CE194E00D4CDAF /* MenuSelectionTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8DC19CE194E00D4CDAF /* MenuSelectionTVC.m */; };
+		E566B8E019CE1F0B00D4CDAF /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8DE19CE1F0B00D4CDAF /* Bolts.framework */; };
+		E566B8E119CE1F0B00D4CDAF /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8DF19CE1F0B00D4CDAF /* Parse.framework */; };
+		E566B8E319CE1F4200D4CDAF /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8E219CE1F4200D4CDAF /* AudioToolbox.framework */; };
+		E566B8E519CE1F4D00D4CDAF /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8E419CE1F4D00D4CDAF /* CFNetwork.framework */; };
+		E566B8E719CE1F5800D4CDAF /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8E619CE1F5800D4CDAF /* CoreGraphics.framework */; };
+		E566B8E919CE1F6600D4CDAF /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8E819CE1F6600D4CDAF /* MobileCoreServices.framework */; };
+		E566B8EB19CE1F6F00D4CDAF /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8EA19CE1F6F00D4CDAF /* Security.framework */; };
+		E566B8ED19CE1F7600D4CDAF /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8EC19CE1F7600D4CDAF /* StoreKit.framework */; };
+		E566B8F019CE211900D4CDAF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8EF19CE211900D4CDAF /* Accounts.framework */; };
+		E566B8F219CE211F00D4CDAF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8F119CE211F00D4CDAF /* Social.framework */; };
 		E5E052FC19CD3036005FA27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FB19CD3036005FA27B /* main.m */; };
 		E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FE19CD3036005FA27B /* AppDelegate.m */; };
 		E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0530119CD3036005FA27B /* WelcomeVC.m */; };
@@ -52,6 +62,16 @@
 		E566B8D919CE0BD800D4CDAF /* CreateOrderTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CreateOrderTVC.m; sourceTree = "<group>"; };
 		E566B8DB19CE194E00D4CDAF /* MenuSelectionTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuSelectionTVC.h; sourceTree = "<group>"; };
 		E566B8DC19CE194E00D4CDAF /* MenuSelectionTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuSelectionTVC.m; sourceTree = "<group>"; };
+		E566B8DE19CE1F0B00D4CDAF /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		E566B8DF19CE1F0B00D4CDAF /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		E566B8E219CE1F4200D4CDAF /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		E566B8E419CE1F4D00D4CDAF /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		E566B8E619CE1F5800D4CDAF /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		E566B8E819CE1F6600D4CDAF /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E566B8EA19CE1F6F00D4CDAF /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		E566B8EC19CE1F7600D4CDAF /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		E566B8EF19CE211900D4CDAF /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		E566B8F119CE211F00D4CDAF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E5E052F619CD3036005FA27B /* HackGT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E052FA19CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E052FB19CD3036005FA27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -90,10 +110,19 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E566B8F219CE211F00D4CDAF /* Social.framework in Frameworks */,
+				E566B8F019CE211900D4CDAF /* Accounts.framework in Frameworks */,
+				E566B8ED19CE1F7600D4CDAF /* StoreKit.framework in Frameworks */,
+				E566B8EB19CE1F6F00D4CDAF /* Security.framework in Frameworks */,
+				E566B8E919CE1F6600D4CDAF /* MobileCoreServices.framework in Frameworks */,
+				E566B8E719CE1F5800D4CDAF /* CoreGraphics.framework in Frameworks */,
+				E566B8E519CE1F4D00D4CDAF /* CFNetwork.framework in Frameworks */,
+				E566B8E319CE1F4200D4CDAF /* AudioToolbox.framework in Frameworks */,
 				E5E0534219CD70DF005FA27B /* SystemConfiguration.framework in Frameworks */,
 				E5E0534019CD70DA005FA27B /* QuartzCore.framework in Frameworks */,
 				E5E0533E19CD70D3005FA27B /* OpenGLES.framework in Frameworks */,
 				E5E0533C19CD70CC005FA27B /* libz.dylib in Frameworks */,
+				E566B8E119CE1F0B00D4CDAF /* Parse.framework in Frameworks */,
 				E5E0533A19CD70C3005FA27B /* libicucore.dylib in Frameworks */,
 				E5E0533819CD70BA005FA27B /* libc++.dylib in Frameworks */,
 				E5E0533619CD70AE005FA27B /* ImageIO.framework in Frameworks */,
@@ -103,6 +132,7 @@
 				E5E0532E19CD708F005FA27B /* CoreData.framework in Frameworks */,
 				E5E0532619CD6FB5005FA27B /* GoogleMaps.framework in Frameworks */,
 				E5E0532C19CD707B005FA27B /* AVFoundation.framework in Frameworks */,
+				E566B8E019CE1F0B00D4CDAF /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,12 +161,11 @@
 			name = NewUserRegistration;
 			sourceTree = "<group>";
 		};
-		E5E052ED19CD3036005FA27B = {
+		E566B8EE19CE1F8B00D4CDAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				E5E052F819CD3036005FA27B /* HackGT */,
-				E5E0531219CD3036005FA27B /* HackGTTests */,
-				E5E052F719CD3036005FA27B /* Products */,
+				E566B8F119CE211F00D4CDAF /* Social.framework */,
+				E566B8EF19CE211900D4CDAF /* Accounts.framework */,
 				E5E0533B19CD70CC005FA27B /* libz.dylib */,
 				E5E0533919CD70C3005FA27B /* libicucore.dylib */,
 				E5E0533719CD70BA005FA27B /* libc++.dylib */,
@@ -151,6 +180,25 @@
 				E5E0532D19CD708F005FA27B /* CoreData.framework */,
 				E5E0532519CD6FB5005FA27B /* GoogleMaps.framework */,
 				E5E0532B19CD707B005FA27B /* AVFoundation.framework */,
+				E566B8EC19CE1F7600D4CDAF /* StoreKit.framework */,
+				E566B8EA19CE1F6F00D4CDAF /* Security.framework */,
+				E566B8E819CE1F6600D4CDAF /* MobileCoreServices.framework */,
+				E566B8E619CE1F5800D4CDAF /* CoreGraphics.framework */,
+				E566B8E419CE1F4D00D4CDAF /* CFNetwork.framework */,
+				E566B8E219CE1F4200D4CDAF /* AudioToolbox.framework */,
+				E566B8DE19CE1F0B00D4CDAF /* Bolts.framework */,
+				E566B8DF19CE1F0B00D4CDAF /* Parse.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E5E052ED19CD3036005FA27B = {
+			isa = PBXGroup;
+			children = (
+				E566B8EE19CE1F8B00D4CDAF /* Frameworks */,
+				E5E052F819CD3036005FA27B /* HackGT */,
+				E5E0531219CD3036005FA27B /* HackGTTests */,
+				E5E052F719CD3036005FA27B /* Products */,
 			);
 			sourceTree = "<group>";
 		};
