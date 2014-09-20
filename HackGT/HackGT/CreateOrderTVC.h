@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MenuSelectionTVC.h"
 
 @interface CreateOrderTVC : UITableViewController
 
 @property (strong, nonatomic) NSArray *resturants;
-@property (nonatomic) int currentResturant;
 
 @end
