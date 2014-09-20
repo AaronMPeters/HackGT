@@ -7,9 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <Parse/Parse.h>
 
 @interface MenuSelectionTVC : UITableViewController
 
-@property (strong, nonatomic) NSMutableDictionary *foodItemsAndCost;
+@property (strong, nonatomic) NSMutableArray *foodItems;
+@property (strong, nonatomic) NSMutableArray *foodCosts;
 
 @end

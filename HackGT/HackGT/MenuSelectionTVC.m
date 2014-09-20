@@ -16,6 +16,9 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self retreiveFoodPricesFromDatabase];
+    _foodItems = [[NSMutableArray alloc] init];
+    _foodCosts = [[NSMutableArray alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -32,26 +35,25 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-#warning Potentially incomplete method implementation.
+    return 1;
     // Return the number of sections.
-    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [_foodItems count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"menuItemCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    
+    cell.textLabel.text = [_foodItems objectAtIndex:indexPath.row];
+    cell.detailTextLabel.text = [_foodCosts objectAtIndex:indexPath.row];
     return cell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -86,6 +88,29 @@
     return YES;
 }
 */
+
+# pragma mark - parse methods
+
+- (void)retreiveFoodPricesFromDatabase
+{
+    PFQuery *query = [PFQuery queryWithClassName:@"FoodPrice"];
+    [query whereKey:@"RESTAURANT" equalTo:self.navigationItem.title];
+    [query findObjectsInBackgroundWithBlock:^(NSArray *objects, NSError *error) {
+        if (!error) {
+            // The find succeeded.
+            // Do something with the found objects
+            for (PFObject *object in objects) {
+                [_foodItems addObject:object[@"FOOD"]];
+                NSString* formattedNumber = [NSString stringWithFormat:@"%.02f", [object[@"PRICE"] floatValue]];
+                [_foodCosts addObject:formattedNumber];
+            }
+        } else {
+            // Log details of the failure
+            NSLog(@"Error: %@ %@", error, [error userInfo]);
+        }
+        [self.tableView reloadData];
+    }];
+}
 
 /*
 #pragma mark - Navigation

@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +21,9 @@
     
     // Google Maps API:
     [GMSServices provideAPIKey:@"AIzaSyCzerHIRRrB_1CY7PrJ2oGBFW7LaxuHSns"];
+    [Parse setApplicationId:@"DQFadREOotLYBCgxJepTru9SVhJmMnu734hYWACx"
+                  clientKey:@"zodnAHyfPclyA19FEcbaIDGbaP08R9pqrt9M33I3"];
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     
     return YES;
 }
