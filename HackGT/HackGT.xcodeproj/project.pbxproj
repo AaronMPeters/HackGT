@@ -1,0 +1,427 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		E5E052FC19CD3036005FA27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FB19CD3036005FA27B /* main.m */; };
+		E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FE19CD3036005FA27B /* AppDelegate.m */; };
+		E5E0530219CD3036005FA27B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0530119CD3036005FA27B /* ViewController.m */; };
+		E5E0530519CD3036005FA27B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E5E0530319CD3036005FA27B /* Main.storyboard */; };
+		E5E0530719CD3036005FA27B /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E5E0530619CD3036005FA27B /* Images.xcassets */; };
+		E5E0530A19CD3036005FA27B /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E5E0530819CD3036005FA27B /* LaunchScreen.xib */; };
+		E5E0531619CD3036005FA27B /* HackGTTests.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0531519CD3036005FA27B /* HackGTTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E5E0531019CD3036005FA27B /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E5E052EE19CD3036005FA27B /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E5E052F519CD3036005FA27B;
+			remoteInfo = HackGT;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		E5E052F619CD3036005FA27B /* HackGT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGT.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E052FA19CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E052FB19CD3036005FA27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		E5E052FD19CD3036005FA27B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		E5E052FE19CD3036005FA27B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		E5E0530019CD3036005FA27B /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		E5E0530119CD3036005FA27B /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		E5E0530419CD3036005FA27B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		E5E0530619CD3036005FA27B /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		E5E0530919CD3036005FA27B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		E5E0530F19CD3036005FA27B /* HackGTTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HackGTTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		E5E0531419CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E5E0531519CD3036005FA27B /* HackGTTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = HackGTTests.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E5E052F319CD3036005FA27B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E0530C19CD3036005FA27B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		E5E052ED19CD3036005FA27B = {
+			isa = PBXGroup;
+			children = (
+				E5E052F819CD3036005FA27B /* HackGT */,
+				E5E0531219CD3036005FA27B /* HackGTTests */,
+				E5E052F719CD3036005FA27B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		E5E052F719CD3036005FA27B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E5E052F619CD3036005FA27B /* HackGT.app */,
+				E5E0530F19CD3036005FA27B /* HackGTTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E5E052F819CD3036005FA27B /* HackGT */ = {
+			isa = PBXGroup;
+			children = (
+				E5E052FD19CD3036005FA27B /* AppDelegate.h */,
+				E5E052FE19CD3036005FA27B /* AppDelegate.m */,
+				E5E0530019CD3036005FA27B /* ViewController.h */,
+				E5E0530119CD3036005FA27B /* ViewController.m */,
+				E5E0530319CD3036005FA27B /* Main.storyboard */,
+				E5E0530619CD3036005FA27B /* Images.xcassets */,
+				E5E0530819CD3036005FA27B /* LaunchScreen.xib */,
+				E5E052F919CD3036005FA27B /* Supporting Files */,
+			);
+			path = HackGT;
+			sourceTree = "<group>";
+		};
+		E5E052F919CD3036005FA27B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5E052FA19CD3036005FA27B /* Info.plist */,
+				E5E052FB19CD3036005FA27B /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E5E0531219CD3036005FA27B /* HackGTTests */ = {
+			isa = PBXGroup;
+			children = (
+				E5E0531519CD3036005FA27B /* HackGTTests.m */,
+				E5E0531319CD3036005FA27B /* Supporting Files */,
+			);
+			path = HackGTTests;
+			sourceTree = "<group>";
+		};
+		E5E0531319CD3036005FA27B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				E5E0531419CD3036005FA27B /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E5E052F519CD3036005FA27B /* HackGT */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E0531919CD3036005FA27B /* Build configuration list for PBXNativeTarget "HackGT" */;
+			buildPhases = (
+				E5E052F219CD3036005FA27B /* Sources */,
+				E5E052F319CD3036005FA27B /* Frameworks */,
+				E5E052F419CD3036005FA27B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HackGT;
+			productName = HackGT;
+			productReference = E5E052F619CD3036005FA27B /* HackGT.app */;
+			productType = "com.apple.product-type.application";
+		};
+		E5E0530E19CD3036005FA27B /* HackGTTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E5E0531C19CD3036005FA27B /* Build configuration list for PBXNativeTarget "HackGTTests" */;
+			buildPhases = (
+				E5E0530B19CD3036005FA27B /* Sources */,
+				E5E0530C19CD3036005FA27B /* Frameworks */,
+				E5E0530D19CD3036005FA27B /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E5E0531119CD3036005FA27B /* PBXTargetDependency */,
+			);
+			name = HackGTTests;
+			productName = HackGTTests;
+			productReference = E5E0530F19CD3036005FA27B /* HackGTTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E5E052EE19CD3036005FA27B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+				ORGANIZATIONNAME = "Aaron Peters";
+				TargetAttributes = {
+					E5E052F519CD3036005FA27B = {
+						CreatedOnToolsVersion = 6.0.1;
+					};
+					E5E0530E19CD3036005FA27B = {
+						CreatedOnToolsVersion = 6.0.1;
+						TestTargetID = E5E052F519CD3036005FA27B;
+					};
+				};
+			};
+			buildConfigurationList = E5E052F119CD3036005FA27B /* Build configuration list for PBXProject "HackGT" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = E5E052ED19CD3036005FA27B;
+			productRefGroup = E5E052F719CD3036005FA27B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				E5E052F519CD3036005FA27B /* HackGT */,
+				E5E0530E19CD3036005FA27B /* HackGTTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		E5E052F419CD3036005FA27B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E0530519CD3036005FA27B /* Main.storyboard in Resources */,
+				E5E0530A19CD3036005FA27B /* LaunchScreen.xib in Resources */,
+				E5E0530719CD3036005FA27B /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E0530D19CD3036005FA27B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E5E052F219CD3036005FA27B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E0530219CD3036005FA27B /* ViewController.m in Sources */,
+				E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */,
+				E5E052FC19CD3036005FA27B /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5E0530B19CD3036005FA27B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E5E0531619CD3036005FA27B /* HackGTTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E5E0531119CD3036005FA27B /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = E5E052F519CD3036005FA27B /* HackGT */;
+			targetProxy = E5E0531019CD3036005FA27B /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		E5E0530319CD3036005FA27B /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5E0530419CD3036005FA27B /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		E5E0530819CD3036005FA27B /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				E5E0530919CD3036005FA27B /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		E5E0531719CD3036005FA27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		E5E0531819CD3036005FA27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		E5E0531A19CD3036005FA27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HackGT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		E5E0531B19CD3036005FA27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = HackGT/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		E5E0531D19CD3036005FA27B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HackGTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackGT.app/HackGT";
+			};
+			name = Debug;
+		};
+		E5E0531E19CD3036005FA27B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = HackGTTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HackGT.app/HackGT";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E5E052F119CD3036005FA27B /* Build configuration list for PBXProject "HackGT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E0531719CD3036005FA27B /* Debug */,
+				E5E0531819CD3036005FA27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5E0531919CD3036005FA27B /* Build configuration list for PBXNativeTarget "HackGT" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E0531A19CD3036005FA27B /* Debug */,
+				E5E0531B19CD3036005FA27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		E5E0531C19CD3036005FA27B /* Build configuration list for PBXNativeTarget "HackGTTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E5E0531D19CD3036005FA27B /* Debug */,
+				E5E0531E19CD3036005FA27B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E5E052EE19CD3036005FA27B /* Project object */;
+}
