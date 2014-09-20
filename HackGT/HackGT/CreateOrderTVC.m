@@ -16,18 +16,19 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    _currentResturant = 0;
     
     _resturants = @[
-                      @"McDonalds",
-                      @"Burger King",
+                      @"McDonald's",
+                      @"Wendy's",
                       @"Taco Bell"
                       ];
     
     // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -39,12 +40,17 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     // Return the number of sections.
-    return 1;
+    return [_resturants count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     // Return the number of rows in the section.
-    return [_resturants count];
+    return 1;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 100;
 }
 
 
@@ -52,7 +58,11 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LogoCell" forIndexPath:indexPath];
     
     // Configure the cell...
-    cell.textLabel.text = [_resturants objectAtIndex:indexPath.row];
+    
+    cell.textLabel.text = [_resturants objectAtIndex:_currentResturant];
+    NSMutableString *name = [[NSMutableString alloc] initWithString:[_resturants objectAtIndex:_currentResturant++]];
+    [name appendString:@"-Logo.png"];
+    cell.imageView.image = [UIImage imageNamed:name];
     return cell;
 }
 
