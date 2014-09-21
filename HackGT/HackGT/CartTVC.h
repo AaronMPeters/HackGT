@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <sqlite3.h>
+#import "CheckoutVC.h"
 
 @interface CartTVC : UITableViewController
 

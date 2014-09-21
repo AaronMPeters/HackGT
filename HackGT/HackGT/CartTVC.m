@@ -268,14 +268,17 @@
     return success;
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSString * segueIdentifier = [segue identifier];
+    if([segueIdentifier isEqualToString:@"CheckoutSegue"]){
+        CheckoutVC *vc = (CheckoutVC *)[segue destinationViewController];
+        vc.subTotalAmount = [[NSNumber alloc] initWithDouble:_totalCost];
+    }
 }
-*/
+
 
 @end

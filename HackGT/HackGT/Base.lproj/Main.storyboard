@@ -245,89 +245,97 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-55-aRa">
-                                <rect key="frame" x="175" y="492" width="250" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-55-aRa">
+                                <rect key="frame" x="41" y="432" width="250" height="32"/>
                                 <color key="backgroundColor" red="0.068778128080000001" green="0.2869552937" blue="0.63992745539999996" alpha="1" colorSpace="calibratedRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="32" id="K7X-zL-rUj"/>
-                                    <constraint firstAttribute="width" constant="105" id="sSX-ld-Ab3"/>
-                                </constraints>
+                                <accessibility key="accessibilityConfiguration">
+                                    <accessibilityTraits key="traits" none="YES" button="YES" notEnabled="YES"/>
+                                    <bool key="isElement" value="NO"/>
+                                </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Checkout With PayPal">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
+                                    <action selector="didClickCheckoutBtn:" destination="FLi-C0-i8G" eventType="touchUpInside" id="3DU-P3-UhJ"/>
                                     <action selector="didPressAddButton:" destination="mSy-eh-dPg" eventType="touchUpInside" id="CT0-7I-ju9"/>
+                                    <segue destination="xhM-9A-NwV" kind="show" id="j9B-46-DA7"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Due:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSp-MD-8OT">
-                                <rect key="frame" x="175" y="181" width="120" height="21"/>
+                                <rect key="frame" x="41" y="174" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUL-iF-9YB">
-                                <rect key="frame" x="309" y="181" width="116" height="21"/>
+                                <rect key="frame" x="175" y="174" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-Mu-gZ6">
-                                <rect key="frame" x="175" y="210" width="250" height="30"/>
+                                <rect key="frame" x="41" y="203" width="250" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="FLi-C0-i8G" id="kmF-rd-MYB"/>
+                                </connections>
                             </textField>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ge3-ql-9gf">
-                                <rect key="frame" x="175" y="269" width="250" height="215"/>
+                                <rect key="frame" x="41" y="262" width="250" height="162"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Processing Fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3E-18-vuA">
-                                <rect key="frame" x="175" y="140" width="120" height="21"/>
+                                <rect key="frame" x="41" y="133" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s3-K5-lLH">
-                                <rect key="frame" x="309" y="140" width="116" height="21"/>
+                                <rect key="frame" x="175" y="133" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery Fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF8-Wi-bdo">
-                                <rect key="frame" x="175" y="116" width="120" height="21"/>
+                                <rect key="frame" x="41" y="109" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMl-qb-4Vx">
-                                <rect key="frame" x="309" y="116" width="116" height="21"/>
+                                <rect key="frame" x="175" y="109" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sub-Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlx-Im-Wq8">
-                                <rect key="frame" x="175" y="87" width="120" height="21"/>
+                                <rect key="frame" x="41" y="80" width="120" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VF-A0-N07">
-                                <rect key="frame" x="309" y="91" width="116" height="21"/>
+                                <rect key="frame" x="175" y="84" width="116" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="47D-bs-31r">
-                                <rect key="frame" x="175" y="171" width="250" height="2"/>
+                                <rect key="frame" x="41" y="164" width="250" height="2"/>
                             </progressView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmA-dq-ag9">
-                                <rect key="frame" x="197" y="239" width="207" height="30"/>
+                                <rect key="frame" x="63" y="232" width="207" height="30"/>
                                 <state key="normal" title="I certify this address is correct">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="didCertifyAddress:" destination="FLi-C0-i8G" eventType="touchUpInside" id="paV-go-Mgc"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember, you won't be charged until someone accepts your order!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP8-iS-EQ0">
-                                <rect key="frame" x="79" y="527" width="442" height="21"/>
+                                <rect key="frame" x="-55" y="472" width="442" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="9"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -336,10 +344,20 @@
                         <color key="backgroundColor" red="1" green="0.64263999829999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Checkout" id="epU-dW-uqB"/>
+                    <connections>
+                        <outlet property="addressCertifyButton" destination="cmA-dq-ag9" id="yhb-bt-Wis"/>
+                        <outlet property="addressLabel" destination="ii2-Mu-gZ6" id="5PQ-9m-dOV"/>
+                        <outlet property="deliveryFeeLabel" destination="UMl-qb-4Vx" id="tUp-HG-Z9G"/>
+                        <outlet property="grandTotalLabel" destination="zUL-iF-9YB" id="vQK-RO-Mhi"/>
+                        <outlet property="paypalCheckoutButton" destination="Fe8-55-aRa" id="30e-lI-BJk"/>
+                        <outlet property="processingFeeLabel" destination="9s3-K5-lLH" id="bzB-r4-PEp"/>
+                        <outlet property="subTotalLabel" destination="3VF-A0-N07" id="4Ie-J6-8fq"/>
+                        <outlet property="viewForMap" destination="ge3-ql-9gf" id="zrd-s3-utg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="b14-ro-pdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4928" y="1083"/>
+            <point key="canvasLocation" x="4928" y="954"/>
         </scene>
         <!--New Item-->
         <scene sceneID="nQn-hJ-xf4">
@@ -893,7 +911,7 @@
                                     </subviews>
                                 </tableViewCellContentView>
                                 <connections>
-                                    <segue destination="FLi-C0-i8G" kind="show" id="xzQ-uQ-ahy"/>
+                                    <segue destination="FLi-C0-i8G" kind="show" identifier="CheckoutSegue" id="xzQ-uQ-ahy"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -937,4 +955,7 @@
         <image name="shopping2" width="32" height="32"/>
         <image name="three115" width="32" height="32"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="j9B-46-DA7"/>
+    </inferredMetricsTieBreakers>
 </document>
