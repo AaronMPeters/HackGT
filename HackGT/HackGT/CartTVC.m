@@ -1,38 +1,29 @@
 //
-//  CreateOrderTVC.m
+//  CartTVC.m
 //  HackGT
 //
 //  Created by Aaron Peters on 9/20/14.
 //  Copyright (c) 2014 Aaron Peters. All rights reserved.
 //
 
-#import "CreateOrderTVC.h"
+#import "CartTVC.h"
 
-@interface CreateOrderTVC ()
+@interface CartTVC ()
 
 @end
 
-@implementation CreateOrderTVC
+@implementation CartTVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self createOrAccessCartDatabase];
-    
-    _resturants = @[
-                      @"McDonald's",
-                      @"Wendy's",
-                      @"Taco Bell"
-                      ];
-    
-    _cart_items = [self getCartCount];
-    NSString * cartCount = [NSString stringWithFormat:@"%d", _cart_items];
-    [[[[[self tabBarController] tabBar] items] objectAtIndex:1] setBadgeValue:cartCount];
+    _foodItems = [[NSMutableArray alloc] init];
+    _foodCosts = [[NSMutableArray alloc] init];
     
     // Uncomment the following line to preserve selection between presentations.
-    self.clearsSelectionOnViewWillAppear = NO;
+    // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -43,33 +34,26 @@
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+#warning Potentially incomplete method implementation.
     // Return the number of sections.
-    return [_resturants count];
+    return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 1;
+    return 0;
 }
 
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    return 100;
-}
-
-
+/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"LogoCell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
     // Configure the cell...
     
-    cell.textLabel.text = [_resturants objectAtIndex:indexPath.section];
-    NSMutableString *name = [[NSMutableString alloc] initWithString:[_resturants objectAtIndex:indexPath.section]];
-    [name appendString:@"-Logo.png"];
-    cell.imageView.image = [UIImage imageNamed:name];
     return cell;
 }
-
+*/
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,9 +89,9 @@
 }
 */
 
-#pragma mark - SQLite3 methods
+#pragma mark SQLite Methods
 
-- (void)createOrAccessCartDatabase
+- (void)accessCartDatabase
 {
     NSString *docsDir;
     NSArray *dirPaths;
@@ -127,68 +111,58 @@
     
     if ([filemgr fileExistsAtPath: _cartDatabasePath ] == NO)
     {
-        const char *dbpath = [_cartDatabasePath UTF8String];
-        
-        if (sqlite3_open(dbpath, &_shoppingCartDB) == SQLITE_OK)
-        {
-            char *errMsg;
-            const char *sql_stmt =
-            "CREATE TABLE IF NOT EXISTS CART (ID INTEGER PRIMARY KEY AUTOINCREMENT, FOOD_ITEM TEXT, SPECIAL_INSTRUCTIONS TEXT, PRICE DOUBLE, QTY INTEGER)";
-            
-            if (sqlite3_exec(_shoppingCartDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
-                NSLog(@"%@", @"Failed to create table");
-            else
-                NSLog(@"%@", @"Successfully created table");
-            
-            sqlite3_close(_shoppingCartDB);
-        } else
-            NSLog(@"%@", @"Failed to open/create database");
+        NSLog(@"%@", @"Table does not exist. Fatal error");
     }
     else
-        NSLog(@"%@", @"Table already exists. Status OK");
+        NSLog(@"%@", @"Table exists and is open. Status OK");
 }
 
-- (int) getCartCount
+- (void)getAllItemsFromCart:(int)day
 {
-    int count = 0;
-    if (sqlite3_open([_cartDatabasePath UTF8String], &_shoppingCartDB) == SQLITE_OK)
+    //NSMutableArray *temp = [[NSMutableArray alloc] init];
+    const char *dbpath = [_cartDatabasePath UTF8String];
+    sqlite3_stmt    *statement;
+    
+    if (sqlite3_open(dbpath, &_shoppingCartDB) == SQLITE_OK)
     {
-        const char* sqlStatement = "SELECT COUNT(*) FROM CART";
-        sqlite3_stmt *statement;
+        NSString *querySQL = [NSString stringWithFormat:
+                              @"SELECT food_item, price, qty FROM cart"];
         
-        if( sqlite3_prepare_v2(_shoppingCartDB, sqlStatement, -1, &statement, NULL) == SQLITE_OK )
+        const char *query_stmt = [querySQL UTF8String];
+        
+        if (sqlite3_prepare_v2(_shoppingCartDB,
+                               query_stmt, -1, &statement, NULL) == SQLITE_OK)
         {
-            //Loop through all the returned rows (should be just one)
-            while( sqlite3_step(statement) == SQLITE_ROW )
+            while (sqlite3_step(statement) == SQLITE_ROW)
             {
-                count = sqlite3_column_int(statement, 0);
+                NSString *food_item_field = [[NSString alloc]
+                                             initWithUTF8String:(const char *)
+                                             sqlite3_column_text(statement, 0)];
+                NSString *price_field = [[NSString alloc]
+                                             initWithUTF8String:(const char *)
+                                             sqlite3_column_text(statement, 1)];
+                NSString *qty_field = [[NSString alloc]
+                                             initWithUTF8String:(const char *)
+                                             sqlite3_column_text(statement, 2)];
+
+                //NSLog(@"Assignment Found with Name: %@", assignmentField);
+                //[temp addObject:assignmentField];
             }
+            sqlite3_finalize(statement);
         }
-        else
-        {
-            NSLog( @"Failed from sqlite3_prepare_v2. Error is:  %s", sqlite3_errmsg(_shoppingCartDB) );
-        }
-        
-        // Finalize and close database.
-        sqlite3_finalize(statement);
         sqlite3_close(_shoppingCartDB);
     }
-    
-    return count;
+    //return temp;
 }
 
-
+/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    NSString * segueIdentifier = [segue identifier];
-    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
-    if([segueIdentifier isEqualToString:@"MenuSegue"]){
-        MenuSelectionTVC *tvc = (MenuSelectionTVC *)[segue destinationViewController];
-        tvc.navigationItem.title = [_resturants objectAtIndex:indexPath.section];
-    }
+    // Get the new view controller using [segue destinationViewController].
+    // Pass the selected object to the new view controller.
 }
-
+*/
 
 @end

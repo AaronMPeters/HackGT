@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <sqlite3.h>
 #import "MenuSelectionTVC.h"
 
 @interface CreateOrderTVC : UITableViewController
 
 @property (strong, nonatomic) NSArray *resturants;
+
+@property (nonatomic) sqlite3 *shoppingCartDB;
+@property (strong, nonatomic) NSString *cartDatabasePath;
+
+@property (nonatomic) int cart_items;
 
 @end

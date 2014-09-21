@@ -112,14 +112,22 @@
     }];
 }
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    NSString * segueIdentifier = [segue identifier];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:sender];
+    if([segueIdentifier isEqualToString:@"NewItemSegue"]){
+        NewItemVC *vc = (NewItemVC *)[segue destinationViewController];
+        NSMutableString *text = [[NSMutableString alloc] initWithString:@"$"];
+        [text appendString:[_foodCosts objectAtIndex:indexPath.row]];
+        vc.menuItemPrice = [_foodCosts objectAtIndex:indexPath.row];
+        vc.menuItemLabelText = [_foodItems objectAtIndex:indexPath.row];
+        vc.priceLabelText = text;
+    }
 }
-*/
+
 
 @end

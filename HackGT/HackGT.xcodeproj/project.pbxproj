@@ -21,6 +21,8 @@
 		E566B8F019CE211900D4CDAF /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8EF19CE211900D4CDAF /* Accounts.framework */; };
 		E566B8F219CE211F00D4CDAF /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8F119CE211F00D4CDAF /* Social.framework */; };
 		E566B8F519CE3AAA00D4CDAF /* NewItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8F419CE3AAA00D4CDAF /* NewItemVC.m */; };
+		E566B8F719CE52C600D4CDAF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8F619CE52C600D4CDAF /* libsqlite3.dylib */; };
+		E566B8FA19CE74C000D4CDAF /* CartTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8F919CE74C000D4CDAF /* CartTVC.m */; };
 		E5E052FC19CD3036005FA27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FB19CD3036005FA27B /* main.m */; };
 		E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FE19CD3036005FA27B /* AppDelegate.m */; };
 		E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0530119CD3036005FA27B /* WelcomeVC.m */; };
@@ -75,6 +77,9 @@
 		E566B8F119CE211F00D4CDAF /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		E566B8F319CE3AAA00D4CDAF /* NewItemVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NewItemVC.h; sourceTree = "<group>"; };
 		E566B8F419CE3AAA00D4CDAF /* NewItemVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NewItemVC.m; sourceTree = "<group>"; };
+		E566B8F619CE52C600D4CDAF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		E566B8F819CE74C000D4CDAF /* CartTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTVC.h; sourceTree = "<group>"; };
+		E566B8F919CE74C000D4CDAF /* CartTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTVC.m; sourceTree = "<group>"; };
 		E5E052F619CD3036005FA27B /* HackGT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E052FA19CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E052FB19CD3036005FA27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -113,6 +118,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E566B8F719CE52C600D4CDAF /* libsqlite3.dylib in Frameworks */,
 				E566B8F219CE211F00D4CDAF /* Social.framework in Frameworks */,
 				E566B8F019CE211900D4CDAF /* Accounts.framework in Frameworks */,
 				E566B8ED19CE1F7600D4CDAF /* StoreKit.framework in Frameworks */,
@@ -167,6 +173,7 @@
 		E566B8EE19CE1F8B00D4CDAF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E566B8F619CE52C600D4CDAF /* libsqlite3.dylib */,
 				E566B8F119CE211F00D4CDAF /* Social.framework */,
 				E566B8EF19CE211900D4CDAF /* Accounts.framework */,
 				E5E0533B19CD70CC005FA27B /* libz.dylib */,
@@ -195,6 +202,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E566B8FB19CE74C600D4CDAF /* CreateNewOrder */ = {
+			isa = PBXGroup;
+			children = (
+				E566B8D819CE0BD800D4CDAF /* CreateOrderTVC.h */,
+				E566B8D919CE0BD800D4CDAF /* CreateOrderTVC.m */,
+				E566B8DB19CE194E00D4CDAF /* MenuSelectionTVC.h */,
+				E566B8DC19CE194E00D4CDAF /* MenuSelectionTVC.m */,
+				E566B8F319CE3AAA00D4CDAF /* NewItemVC.h */,
+				E566B8F419CE3AAA00D4CDAF /* NewItemVC.m */,
+			);
+			name = CreateNewOrder;
+			sourceTree = "<group>";
+		};
 		E5E052ED19CD3036005FA27B = {
 			isa = PBXGroup;
 			children = (
@@ -219,15 +239,12 @@
 			children = (
 				E5E052FD19CD3036005FA27B /* AppDelegate.h */,
 				E5E052FE19CD3036005FA27B /* AppDelegate.m */,
-				E566B8D819CE0BD800D4CDAF /* CreateOrderTVC.h */,
-				E566B8D919CE0BD800D4CDAF /* CreateOrderTVC.m */,
-				E566B8DB19CE194E00D4CDAF /* MenuSelectionTVC.h */,
-				E566B8DC19CE194E00D4CDAF /* MenuSelectionTVC.m */,
-				E566B8F319CE3AAA00D4CDAF /* NewItemVC.h */,
-				E566B8F419CE3AAA00D4CDAF /* NewItemVC.m */,
 				E566B8D719CE001500D4CDAF /* NewUserRegistration */,
-				E5E0530319CD3036005FA27B /* Main.storyboard */,
+				E566B8FB19CE74C600D4CDAF /* CreateNewOrder */,
+				E566B8F819CE74C000D4CDAF /* CartTVC.h */,
+				E566B8F919CE74C000D4CDAF /* CartTVC.m */,
 				E5E0530619CD3036005FA27B /* Images.xcassets */,
+				E5E0530319CD3036005FA27B /* Main.storyboard */,
 				E5E0530819CD3036005FA27B /* LaunchScreen.xib */,
 				E5E052F919CD3036005FA27B /* Supporting Files */,
 			);
@@ -370,6 +387,7 @@
 				E5E0532119CD6146005FA27B /* CreateProfileVC.m in Sources */,
 				E5E052FC19CD3036005FA27B /* main.m in Sources */,
 				E566B8F519CE3AAA00D4CDAF /* NewItemVC.m in Sources */,
+				E566B8FA19CE74C000D4CDAF /* CartTVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
