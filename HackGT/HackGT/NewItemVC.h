@@ -20,6 +20,7 @@
 
 @property (strong, nonatomic) NSString *menuItemLabelText;
 @property (strong, nonatomic) NSString *priceLabelText;
+@property (strong, nonatomic) NSString *restaurant;
 @property (strong, nonatomic) NSNumber *menuItemPrice;
 
 @property (nonatomic) sqlite3 *shoppingCartDB;

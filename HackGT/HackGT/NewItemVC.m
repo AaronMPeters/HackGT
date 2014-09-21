@@ -110,8 +110,8 @@
     {
         
         NSString *insertSQL = [NSString stringWithFormat:
-                               @"INSERT INTO CART (food_item, special_instructions, price, qty) VALUES (\"%@\", \"%@\", \"%f\", \"%d\")",
-                               item, instructions, price, qty];
+                               @"INSERT INTO CART (food_item, special_instructions, price, qty, restaurant) VALUES (\"%@\", \"%@\", \"%f\", \"%d\", \"%@\")",
+                               item, instructions, price, qty, _restaurant];
         
         const char *insert_stmt = [insertSQL UTF8String];
         sqlite3_prepare_v2(_shoppingCartDB, insert_stmt,
@@ -126,6 +126,7 @@
         sqlite3_close(_shoppingCartDB);
     }
 }
+
 
 /*
 #pragma mark - Navigation

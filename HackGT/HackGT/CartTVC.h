@@ -14,7 +14,12 @@
 @property (nonatomic) sqlite3 *shoppingCartDB;
 @property (strong, nonatomic) NSString *cartDatabasePath;
 
-@property (strong, nonatomic) NSMutableArray *foodItems;
+@property (strong, nonatomic) NSMutableArray *foodItemsFormatted;
+@property (strong, nonatomic) NSMutableArray *foodItemsRaw;
+@property (strong, nonatomic) NSMutableArray *qtyOfItems;
 @property (strong, nonatomic) NSMutableArray *foodCosts;
+
+@property (nonatomic) int cart_items;
+@property (nonatomic) double totalCost;
 
 @end

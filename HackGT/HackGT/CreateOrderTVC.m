@@ -133,7 +133,7 @@
         {
             char *errMsg;
             const char *sql_stmt =
-            "CREATE TABLE IF NOT EXISTS CART (ID INTEGER PRIMARY KEY AUTOINCREMENT, FOOD_ITEM TEXT, SPECIAL_INSTRUCTIONS TEXT, PRICE DOUBLE, QTY INTEGER)";
+            "CREATE TABLE IF NOT EXISTS CART (ID INTEGER PRIMARY KEY AUTOINCREMENT, FOOD_ITEM TEXT, SPECIAL_INSTRUCTIONS TEXT, PRICE DOUBLE, QTY INTEGER, RESTAURANT TEXT)";
             
             if (sqlite3_exec(_shoppingCartDB, sql_stmt, NULL, NULL, &errMsg) != SQLITE_OK)
                 NSLog(@"%@", @"Failed to create table");

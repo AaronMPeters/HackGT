@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6245" systemVersion="13E28" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="alm-Bf-lgL">
     <dependencies>
+        <deployment defaultVersion="1792" identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6238"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
@@ -449,7 +450,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="Y6L-hY-ixo" kind="relationship" relationship="viewControllers" id="VFO-Yp-gdZ"/>
-                        <segue destination="w6Y-s4-OJW" kind="relationship" relationship="viewControllers" id="bfG-55-K5H"/>
+                        <segue destination="SgS-Ez-Sbc" kind="relationship" relationship="viewControllers" id="bfG-55-K5H"/>
                         <segue destination="xhM-9A-NwV" kind="relationship" relationship="viewControllers" id="FbY-AH-am2"/>
                         <segue destination="Pov-ZU-GEP" kind="relationship" relationship="viewControllers" id="I9m-2W-mTX"/>
                         <segue destination="xKV-06-Xs2" kind="relationship" relationship="viewControllers" id="UlP-jm-IkF"/>
@@ -728,7 +729,7 @@
         <scene sceneID="EVi-H7-865">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y6L-hY-ixo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New Order" id="6Ia-jY-Y8o"/>
+                    <tabBarItem key="tabBarItem" title="New Order" selectedImage="order.png" id="6Ia-jY-Y8o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FGo-60-6xA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -743,7 +744,7 @@
             </objects>
             <point key="canvasLocation" x="3268" y="215"/>
         </scene>
-        <!--My Cart-->
+        <!--Empty Cart-->
         <scene sceneID="WZX-gt-BHd">
             <objects>
                 <tableViewController id="w6Y-s4-OJW" customClass="CartTVC" sceneMemberID="viewController">
@@ -759,11 +760,31 @@
                                     <subviews>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LzJ-aH-fUv">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Subtitle" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CXw-5J-FwL">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                            <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                            <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="SubmitButtonCell" textLabel="4Gw-1r-0ZW" detailTextLabel="94b-9t-SMa" style="IBUITableViewCellStyleValue1" id="6DF-aE-cUk">
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="6DF-aE-cUk" id="iCy-Sc-kQn">
+                                    <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="4Gw-1r-0ZW">
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Detail" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="94b-9t-SMa">
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                             <color key="textColor" red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
@@ -778,16 +799,35 @@
                             <outlet property="delegate" destination="w6Y-s4-OJW" id="XRc-nc-4hq"/>
                         </connections>
                     </tableView>
-                    <tabBarItem key="tabBarItem" title="Cart" id="Wze-K4-vDq"/>
-                    <navigationItem key="navigationItem" title="My Cart" id="pyn-uu-z7D"/>
+                    <navigationItem key="navigationItem" title="Empty Cart" id="Pfx-LK-GLL"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="50t-xj-Cum" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4086" y="954"/>
+        </scene>
+        <!--Cart-->
+        <scene sceneID="rdc-Ab-zm0">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SgS-Ez-Sbc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Cart" id="Wze-K4-vDq"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SOY-2N-6gH">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="w6Y-s4-OJW" kind="relationship" relationship="rootViewController" id="ua1-Rz-YPg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pij-IP-gRO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3268" y="954"/>
         </scene>
     </scenes>
     <resources>
         <image name="Map_background" width="1178" height="1178"/>
+        <image name="order.png" width="512" height="512"/>
     </resources>
 </document>

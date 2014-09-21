@@ -125,6 +125,7 @@
         [text appendString:[_foodCosts objectAtIndex:indexPath.row]];
         vc.menuItemPrice = [_foodCosts objectAtIndex:indexPath.row];
         vc.menuItemLabelText = [_foodItems objectAtIndex:indexPath.row];
+        vc.restaurant = self.navigationItem.title;
         vc.priceLabelText = text;
     }
 }
