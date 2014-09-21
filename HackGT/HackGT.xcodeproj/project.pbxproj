@@ -25,6 +25,8 @@
 		E566B8FA19CE74C000D4CDAF /* CartTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8F919CE74C000D4CDAF /* CartTVC.m */; };
 		E566B90B19CE991A00D4CDAF /* MapOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B90A19CE991A00D4CDAF /* MapOverviewVC.m */; };
 		E566B90F19CEA72C00D4CDAF /* CheckoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B90E19CEA72C00D4CDAF /* CheckoutVC.m */; };
+		E566B91219CF01D600D4CDAF /* EditProfileVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B91119CF01D600D4CDAF /* EditProfileVC.m */; };
+		E566B91819CF05C800D4CDAF /* DeliverOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B91719CF05C800D4CDAF /* DeliverOverviewVC.m */; };
 		E5E052FC19CD3036005FA27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FB19CD3036005FA27B /* main.m */; };
 		E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FE19CD3036005FA27B /* AppDelegate.m */; };
 		E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0530119CD3036005FA27B /* WelcomeVC.m */; };
@@ -86,6 +88,10 @@
 		E566B90A19CE991A00D4CDAF /* MapOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverviewVC.m; sourceTree = "<group>"; };
 		E566B90D19CEA72C00D4CDAF /* CheckoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutVC.h; sourceTree = "<group>"; };
 		E566B90E19CEA72C00D4CDAF /* CheckoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutVC.m; sourceTree = "<group>"; };
+		E566B91019CF01D600D4CDAF /* EditProfileVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditProfileVC.h; sourceTree = "<group>"; };
+		E566B91119CF01D600D4CDAF /* EditProfileVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditProfileVC.m; sourceTree = "<group>"; };
+		E566B91619CF05C800D4CDAF /* DeliverOverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeliverOverviewVC.h; sourceTree = "<group>"; };
+		E566B91719CF05C800D4CDAF /* DeliverOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeliverOverviewVC.m; sourceTree = "<group>"; };
 		E5E052F619CD3036005FA27B /* HackGT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E052FA19CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E052FB19CD3036005FA27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -232,6 +238,33 @@
 			name = ShoppingCart;
 			sourceTree = "<group>";
 		};
+		E566B91319CF02F100D4CDAF /* Map */ = {
+			isa = PBXGroup;
+			children = (
+				E566B90919CE991A00D4CDAF /* MapOverviewVC.h */,
+				E566B90A19CE991A00D4CDAF /* MapOverviewVC.m */,
+			);
+			name = Map;
+			sourceTree = "<group>";
+		};
+		E566B91419CF02F600D4CDAF /* EditProfile */ = {
+			isa = PBXGroup;
+			children = (
+				E566B91019CF01D600D4CDAF /* EditProfileVC.h */,
+				E566B91119CF01D600D4CDAF /* EditProfileVC.m */,
+			);
+			name = EditProfile;
+			sourceTree = "<group>";
+		};
+		E566B91519CF030B00D4CDAF /* Deliver */ = {
+			isa = PBXGroup;
+			children = (
+				E566B91619CF05C800D4CDAF /* DeliverOverviewVC.h */,
+				E566B91719CF05C800D4CDAF /* DeliverOverviewVC.m */,
+			);
+			name = Deliver;
+			sourceTree = "<group>";
+		};
 		E5E052ED19CD3036005FA27B = {
 			isa = PBXGroup;
 			children = (
@@ -258,9 +291,10 @@
 				E5E052FE19CD3036005FA27B /* AppDelegate.m */,
 				E566B8D719CE001500D4CDAF /* NewUserRegistration */,
 				E566B8FB19CE74C600D4CDAF /* CreateNewOrder */,
+				E566B91519CF030B00D4CDAF /* Deliver */,
 				E566B90C19CE991F00D4CDAF /* ShoppingCart */,
-				E566B90919CE991A00D4CDAF /* MapOverviewVC.h */,
-				E566B90A19CE991A00D4CDAF /* MapOverviewVC.m */,
+				E566B91319CF02F100D4CDAF /* Map */,
+				E566B91419CF02F600D4CDAF /* EditProfile */,
 				E5E0530619CD3036005FA27B /* Images.xcassets */,
 				E5E0530319CD3036005FA27B /* Main.storyboard */,
 				E5E0530819CD3036005FA27B /* LaunchScreen.xib */,
@@ -397,9 +431,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				E5E0532419CD6799005FA27B /* FinishProfileVC.m in Sources */,
+				E566B91219CF01D600D4CDAF /* EditProfileVC.m in Sources */,
 				E566B8D219CDC13D00D4CDAF /* SelectAddressVC.m in Sources */,
 				E566B90F19CEA72C00D4CDAF /* CheckoutVC.m in Sources */,
 				E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */,
+				E566B91819CF05C800D4CDAF /* DeliverOverviewVC.m in Sources */,
 				E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */,
 				E566B8DA19CE0BD800D4CDAF /* CreateOrderTVC.m in Sources */,
 				E566B90B19CE991A00D4CDAF /* MapOverviewVC.m in Sources */,
