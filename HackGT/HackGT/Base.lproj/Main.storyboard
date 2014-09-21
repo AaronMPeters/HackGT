@@ -86,10 +86,10 @@
             </objects>
             <point key="canvasLocation" x="891" y="-557"/>
         </scene>
-        <!--View Controller-->
+        <!--Map-->
         <scene sceneID="g1O-So-hDp">
             <objects>
-                <viewController id="xhM-9A-NwV" sceneMemberID="viewController">
+                <viewController id="xhM-9A-NwV" customClass="MapOverviewVC" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lZb-5G-sGb"/>
                         <viewControllerLayoutGuide type="bottom" id="h5I-2B-5qH"/>
@@ -97,17 +97,9 @@
                     <view key="view" contentMode="scaleToFill" id="cYj-5h-h1F">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recents" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nlC-es-uJL">
-                                <rect key="frame" x="132" y="289" width="63" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" systemItem="recents" id="eod-UZ-2b4"/>
+                    <tabBarItem key="tabBarItem" title="Map" image="facebook30" id="eod-UZ-2b4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bcT-Yo-y6i" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -134,7 +126,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Deliver" id="OwH-FV-C3E"/>
+                    <tabBarItem key="tabBarItem" title="Deliver" image="delivery13" id="OwH-FV-C3E"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="s2c-VT-756" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -161,7 +153,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Settings" id="nNg-K1-3u7"/>
+                    <tabBarItem key="tabBarItem" title="Settings" image="three115" id="nNg-K1-3u7"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bRx-Lr-y9w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -240,6 +232,114 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JiV-IP-R4g" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4928" y="220"/>
+        </scene>
+        <!--Checkout-->
+        <scene sceneID="0rK-0o-rOK">
+            <objects>
+                <viewController id="FLi-C0-i8G" customClass="CheckoutVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="EcY-se-bLe"/>
+                        <viewControllerLayoutGuide type="bottom" id="Egb-Iq-RYE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="zlI-WW-WRh">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fe8-55-aRa">
+                                <rect key="frame" x="175" y="492" width="250" height="32"/>
+                                <color key="backgroundColor" red="0.068778128080000001" green="0.2869552937" blue="0.63992745539999996" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="32" id="K7X-zL-rUj"/>
+                                    <constraint firstAttribute="width" constant="105" id="sSX-ld-Ab3"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <state key="normal" title="Checkout With PayPal">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="didPressAddButton:" destination="mSy-eh-dPg" eventType="touchUpInside" id="CT0-7I-ju9"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total Due:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bSp-MD-8OT">
+                                <rect key="frame" x="175" y="181" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zUL-iF-9YB">
+                                <rect key="frame" x="309" y="181" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ii2-Mu-gZ6">
+                                <rect key="frame" x="175" y="210" width="250" height="30"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ge3-ql-9gf">
+                                <rect key="frame" x="175" y="269" width="250" height="215"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Processing Fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t3E-18-vuA">
+                                <rect key="frame" x="175" y="140" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9s3-K5-lLH">
+                                <rect key="frame" x="309" y="140" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Delivery Fee" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RF8-Wi-bdo">
+                                <rect key="frame" x="175" y="116" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMl-qb-4Vx">
+                                <rect key="frame" x="309" y="116" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sub-Total" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rlx-Im-Wq8">
+                                <rect key="frame" x="175" y="87" width="120" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$0.00" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3VF-A0-N07">
+                                <rect key="frame" x="309" y="91" width="116" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="1" translatesAutoresizingMaskIntoConstraints="NO" id="47D-bs-31r">
+                                <rect key="frame" x="175" y="171" width="250" height="2"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cmA-dq-ag9">
+                                <rect key="frame" x="197" y="239" width="207" height="30"/>
+                                <state key="normal" title="I certify this address is correct">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Remember, you won't be charged until someone accepts your order!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tP8-iS-EQ0">
+                                <rect key="frame" x="79" y="527" width="442" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.64263999829999996" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Checkout" id="epU-dW-uqB"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="b14-ro-pdp" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4928" y="1083"/>
         </scene>
         <!--New Item-->
         <scene sceneID="nQn-hJ-xf4">
@@ -729,7 +829,7 @@
         <scene sceneID="EVi-H7-865">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Y6L-hY-ixo" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="New Order" selectedImage="order.png" id="6Ia-jY-Y8o"/>
+                    <tabBarItem key="tabBarItem" title="New Order" image="order" selectedImage="order" id="6Ia-jY-Y8o"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="FGo-60-6xA">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -792,6 +892,9 @@
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <segue destination="FLi-C0-i8G" kind="show" id="xzQ-uQ-ahy"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -810,7 +913,7 @@
         <scene sceneID="rdc-Ab-zm0">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="SgS-Ez-Sbc" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Cart" id="Wze-K4-vDq"/>
+                    <tabBarItem key="tabBarItem" title="Cart" image="shopping2" id="Wze-K4-vDq"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="SOY-2N-6gH">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
@@ -828,6 +931,10 @@
     </scenes>
     <resources>
         <image name="Map_background" width="1178" height="1178"/>
-        <image name="order.png" width="512" height="512"/>
+        <image name="delivery13" width="32" height="32"/>
+        <image name="facebook30" width="32" height="32"/>
+        <image name="order" width="32" height="32"/>
+        <image name="shopping2" width="32" height="32"/>
+        <image name="three115" width="32" height="32"/>
     </resources>
 </document>

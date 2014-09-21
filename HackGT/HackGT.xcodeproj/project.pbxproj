@@ -23,6 +23,8 @@
 		E566B8F519CE3AAA00D4CDAF /* NewItemVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8F419CE3AAA00D4CDAF /* NewItemVC.m */; };
 		E566B8F719CE52C600D4CDAF /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E566B8F619CE52C600D4CDAF /* libsqlite3.dylib */; };
 		E566B8FA19CE74C000D4CDAF /* CartTVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B8F919CE74C000D4CDAF /* CartTVC.m */; };
+		E566B90B19CE991A00D4CDAF /* MapOverviewVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B90A19CE991A00D4CDAF /* MapOverviewVC.m */; };
+		E566B90F19CEA72C00D4CDAF /* CheckoutVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E566B90E19CEA72C00D4CDAF /* CheckoutVC.m */; };
 		E5E052FC19CD3036005FA27B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FB19CD3036005FA27B /* main.m */; };
 		E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E052FE19CD3036005FA27B /* AppDelegate.m */; };
 		E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = E5E0530119CD3036005FA27B /* WelcomeVC.m */; };
@@ -80,6 +82,10 @@
 		E566B8F619CE52C600D4CDAF /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
 		E566B8F819CE74C000D4CDAF /* CartTVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CartTVC.h; sourceTree = "<group>"; };
 		E566B8F919CE74C000D4CDAF /* CartTVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CartTVC.m; sourceTree = "<group>"; };
+		E566B90919CE991A00D4CDAF /* MapOverviewVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapOverviewVC.h; sourceTree = "<group>"; };
+		E566B90A19CE991A00D4CDAF /* MapOverviewVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapOverviewVC.m; sourceTree = "<group>"; };
+		E566B90D19CEA72C00D4CDAF /* CheckoutVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CheckoutVC.h; sourceTree = "<group>"; };
+		E566B90E19CEA72C00D4CDAF /* CheckoutVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CheckoutVC.m; sourceTree = "<group>"; };
 		E5E052F619CD3036005FA27B /* HackGT.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackGT.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5E052FA19CD3036005FA27B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E5E052FB19CD3036005FA27B /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -215,6 +221,17 @@
 			name = CreateNewOrder;
 			sourceTree = "<group>";
 		};
+		E566B90C19CE991F00D4CDAF /* ShoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				E566B8F819CE74C000D4CDAF /* CartTVC.h */,
+				E566B8F919CE74C000D4CDAF /* CartTVC.m */,
+				E566B90D19CEA72C00D4CDAF /* CheckoutVC.h */,
+				E566B90E19CEA72C00D4CDAF /* CheckoutVC.m */,
+			);
+			name = ShoppingCart;
+			sourceTree = "<group>";
+		};
 		E5E052ED19CD3036005FA27B = {
 			isa = PBXGroup;
 			children = (
@@ -241,8 +258,9 @@
 				E5E052FE19CD3036005FA27B /* AppDelegate.m */,
 				E566B8D719CE001500D4CDAF /* NewUserRegistration */,
 				E566B8FB19CE74C600D4CDAF /* CreateNewOrder */,
-				E566B8F819CE74C000D4CDAF /* CartTVC.h */,
-				E566B8F919CE74C000D4CDAF /* CartTVC.m */,
+				E566B90C19CE991F00D4CDAF /* ShoppingCart */,
+				E566B90919CE991A00D4CDAF /* MapOverviewVC.h */,
+				E566B90A19CE991A00D4CDAF /* MapOverviewVC.m */,
 				E5E0530619CD3036005FA27B /* Images.xcassets */,
 				E5E0530319CD3036005FA27B /* Main.storyboard */,
 				E5E0530819CD3036005FA27B /* LaunchScreen.xib */,
@@ -380,9 +398,11 @@
 			files = (
 				E5E0532419CD6799005FA27B /* FinishProfileVC.m in Sources */,
 				E566B8D219CDC13D00D4CDAF /* SelectAddressVC.m in Sources */,
+				E566B90F19CEA72C00D4CDAF /* CheckoutVC.m in Sources */,
 				E5E0530219CD3036005FA27B /* WelcomeVC.m in Sources */,
 				E5E052FF19CD3036005FA27B /* AppDelegate.m in Sources */,
 				E566B8DA19CE0BD800D4CDAF /* CreateOrderTVC.m in Sources */,
+				E566B90B19CE991A00D4CDAF /* MapOverviewVC.m in Sources */,
 				E566B8DD19CE194E00D4CDAF /* MenuSelectionTVC.m in Sources */,
 				E5E0532119CD6146005FA27B /* CreateProfileVC.m in Sources */,
 				E5E052FC19CD3036005FA27B /* main.m in Sources */,
